@@ -1,0 +1,8 @@
+node_modules/
+*.sqlite
+dist/
+.vscode/
+Copaco/
+stockfile/
+EET_Price_Product_All.csv
+stock.txt

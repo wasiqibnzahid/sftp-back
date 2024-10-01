@@ -1,0 +1,44 @@
+{
+  "name": "sftp-supply",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npx nodemon src/app.ts\" \"npx nodemon src/job.ts\"",
+    "migrate": "npx sequelize-cli db:migrate",
+    "build": "npx tsc",
+    "start": "concurrently \"npx node dist/app.js\" \"npx node dist/job.js\"",
+    "migrate:prod": "npx sequelize-cli db:migrate --env production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@sequelize/sqlite3": "^7.0.0-alpha.42",
+    "concurrently": "^9.0.1",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "express": "^4.21.0",
+    "mysql2": "^3.11.3",
+    "node-cron": "^3.0.3",
+    "sequelize": "^6.37.3",
+    "sequelize-cli": "^6.6.2",
+    "sequelize-typescript": "^2.1.6",
+    "sqlite3": "^5.1.7",
+    "ssh2-sftp-client": "^11.0.0",
+    "unzipper": "^0.12.3",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.5",
+    "@types/node-cron": "^3.0.11",
+    "@types/ssh2-sftp-client": "^9.0.4",
+    "@types/unzipper": "^0.10.10",
+    "@types/xml2js": "^0.4.14",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.2"
+  }
+}
